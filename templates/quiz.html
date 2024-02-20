@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body {
+  background-image: url('https://img.freepik.com/free-photo/pastel-blue-vignette-concrete-textured-background_53876-102637.jpg?w=900&t=st=1687456993~exp=1687457593~hmac=c4056aff3984fb7f1ea39662b48e71adb5e5abc356f0637235d1f3dda9bcd005');
+  margin:10px;
+      background-size: cover;
+}
+    </style>
+<head>
+    <title>Quiz</title>
+</head>
+<body>
+    <h1>Quiz</h1>
+    <form method="POST" action="/quiz">
+
+        {% for question in questions %}
+        <h3>{{ question.question }}</h3>
+        {% for choice in question.choices %}
+        <input type="radio" name="{{ question.question }}" value="{{ choice }}"> {{ choice }}<br>
+        {% endfor %}
+        <br>
+        {% endfor %}
+        <input type="submit" value="Submit">
+        <!-- Rest of your HTML code... -->
+ </form>
+
+
+
+</form>
+
+</body>
+</html>

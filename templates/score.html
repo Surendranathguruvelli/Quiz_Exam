@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Score</title>
+    
+    <style>
+        body{background-image: url("https://t3.ftcdn.net/jpg/02/64/45/14/360_F_264451404_s4Dhf0mQZdg1N4Gx9RrwfnIIjBiZQ459.jpg");
+        margin: 10px;
+        background-size: cover;
+        }
+        .button {
+      display: inline-block;
+      padding: 8px 10px;
+      background-color: #ec091c;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <center>
+    <br><br><br><br><br><br><br><br>
+    <h1 style="color:aliceblue">Quiz Score</h1>
+    <h2 style="color:aliceblue">Your score: {{ score }} /10</h2>
+    <h2 style="color:aliceblue">Grade: {{ grade }}</h2>
+    <h2 style="color:aliceblue">Feedback: {{ message }}</h2>
+    <br><br>
+    <h1>Thank you for taking the quiz!</h1>
+    <p>You have successfully completed the quiz.</p>
+    <a href="{{url_for('index')}}" class="button">Go back to homepage</a>
+    </center>
+</body>
+</html>
